@@ -1,29 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aac2ecf9-ae21-48bf-ad6d-22b036c5c2b5" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="aac2ecf9-ae21-48bf-ad6d-22b036c5c2b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/maps/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/maps/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/slick-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/slick-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/slick.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/slick.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/close.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/footer/email.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/footer/email.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/footer/facebook.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/footer/facebook.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/footer/instagram.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/footer/instagram.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/footer/phone_footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/footer/phone_footer.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/header/phone.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/header/phone.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/main/calendar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/main/calendar.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/main/check.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/main/check.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/main/clean.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/main/clean.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/main/icon_five.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/main/icon_five.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/main/icon_four.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/main/icon_four.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/main/icon_one.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/main/icon_one.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/main/icon_three.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/main/icon_three.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/main/icon_two.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/main/icon_two.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/main/kalendar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/main/kalendar.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/icons/main/meditation.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/icons/main/meditation.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/main/main_banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/main/main_banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/temp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/temp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gvKEZIpyqQlKxyeE1uVoeuGwot" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/../node_modules/gulp" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="watch" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>watch</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <item itemvalue="Gulp.js.watch" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -40,10 +99,36 @@
       <workItem from="1599063301179" duration="15610000" />
       <workItem from="1599103512930" duration="5082000" />
       <workItem from="1599120609356" duration="11398000" />
+      <workItem from="1599149865814" duration="7537000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1599157130010">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599157130010" />
+    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1599157130010">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599157130010" />
+    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1599157130010">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599157130010" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1599157130010">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599157130010" />
+    <state x="675" y="203" width="1151" height="624" key="find.popup" timestamp="1599155849619">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="675" y="203" width="1151" height="624" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599155849619" />
   </component>
 </project>
