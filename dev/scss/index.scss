@@ -1,0 +1,258 @@
+@import "_all-page.scss";
+
+#header {
+
+}
+
+#main {
+    .block_one {
+        background: url(../img/main/main_banner.png) no-repeat;
+        background-size: auto;
+        height : 100vh;
+        background-position-x: right;
+        .container {
+            padding-top : $a208;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content : center;
+            h1 {
+                margin-bottom : $a30;
+                .color {
+                    color: #4FE5E2;
+                }
+            }
+            p {
+                font-family: "GilroyLight";
+                font-size: $a24;
+                line-height: $a28;
+                color: rgba(255, 255, 255, 0.8);
+                margin-bottom : $a60;
+            }
+            .wrapper {
+                width : 100%;
+                display: flex;
+                justify-content : flex-end;
+
+            }
+
+
+        }
+    }
+    .block_two {
+        padding-top : $a120;
+        position : relative;
+        padding-bottom: $a150;
+        .img_banner {
+            position: absolute;
+            width: $a768;
+            left : $a140;
+
+        }
+        .banner_block {
+            padding: $a36 $a125 $a50 $a130;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content : center;
+            position: absolute;
+            width: $a650;
+            height: $a234;
+            left: $a170;
+            top : $a367;
+            background: rgba(32, 68, 121, 0.3);
+            backdrop-filter: blur(60px);
+            transform: matrix(1, 0, 0.35, 1, 0, 0);
+            border-radius: $a18;
+
+
+        }
+        .wrapper_text {
+            position: absolute;
+            z-index : 1;
+            top: $a410;
+            left: $a280;
+            h2 {
+
+            }
+            p {
+                font-family: 'GilroySemiBold';
+                font-size: $a18;
+                line-height: $a26;
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+        .container {
+            padding-left : $a760;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-flow: row wrap;
+
+        }
+    }
+    .block_three {
+        background: url("../img/main/bg_three.png") no-repeat;
+        background-size: 100%;
+        height : 680px;
+    }
+    .block_four {
+        padding-top : $a144;
+        padding-bottom : $a90;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .left_block {
+                h3 {
+                    margin-bottom : $a16;
+                }
+                p {
+                    padding-left : $a30;
+                    font-family: 'GilroySemiBold';
+                    font-size: $a18;
+                    line-height: $a26;
+                    color: #161F32;
+                    opacity: 0.8;
+                }
+            }
+            .right_block {
+                position: relative;
+                //z-index : 1;
+                display: flex;
+                .img_dashed {
+                    position: absolute;
+                    width: $a470;
+                    left : $a92;
+                    top : $a15;
+                    z-index : 0;
+                }
+                .item_icon {
+                    position: relative;
+                    z-index : 1;
+                    margin-top : 0;
+                    margin-left : $a32;
+                }
+            }
+        }
+    }
+    .block_five {
+        padding-top : $a90;
+        padding-bottom : $a145;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .left_block {
+                .lists {
+                    padding-left : $a125;
+                    li {
+                        font-family: 'GilroyBold';
+                        font-size: $a24;
+                        margin-bottom : $a32;
+                        line-height: $a29;
+                        color: #204479;
+                        position: relative;
+                        padding-left : $a35;
+                        &:before {
+                            position : absolute;
+                            content: url("../img/icons/main/check.svg");
+                            width : $a24;
+                            left : 0;
+                            top : 2px;
+                        }
+                    }
+                }
+            }
+            .right_block {
+                h3 {
+                    margin-bottom : $a24;
+                }
+                p {
+                    padding-left : $a30;
+                    font-family: 'GilroyMedium';
+                    font-size: $a16;
+                    line-height: $a26;
+                    color: #161F32;
+                    opacity: 0.7;
+                    margin-bottom : $a40;
+                }
+            }
+        }
+    }
+    .block_slider {
+        padding-bottom : $a220;
+        .container {
+            .slider {
+                .slide {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content : center;
+                    .title {
+                        font-size: $a24;
+                        line-height: $a29;
+                        color: #204479;
+                        font-family: 'GilroyBold';
+                        opacity: 1;
+                        margin-bottom : $a45;
+                    }
+                    .description {
+                        font-family: 'GilroyExtraBold';
+                        font-size: $a28;
+                        line-height: $a34;
+                        color: #161F32;
+                        opacity: 1;
+                        margin-bottom : $a16;
+                    }
+                    .name {
+                        font-family: 'GilroyMedium';
+                        font-size: $a18;
+                        line-height: $a21;
+                        color: #161F32;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+    .block_six {
+        padding: $a110 0 $a118;
+        background: url("../img/main/background_six.png") no-repeat;
+        background-size: auto;
+        .container {
+            h2 {
+                margin-bottom : $a16;
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                margin-bottom : $a40;
+                font-family: 'GilroySemiBold';
+                font-size: $a18;
+                line-height: $a26;
+                color: rgba(255, 255, 255, 0.8);
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    #main {
+
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #main {
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #main {
+
+    }
+}
