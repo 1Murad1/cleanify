@@ -1,6 +1,7 @@
 @import "_pxTOvw.scss";
 @import "jquery.formstyler";
 @import "jquery.formstyler.theme";
+@import "animate";
 
 $osn-col: #161F32;
 
@@ -458,9 +459,10 @@ body {
       transform: translateY(-$a1);
       box-sizing: border-box;
       z-index: 1;
+      margin-top : 0;
       ul {
         li {
-          height: $a55;
+          height: $a45;
           display: flex;
           align-items: center;
           justify-content: flex-start;
@@ -519,6 +521,9 @@ body {
         .footer_menu {
           li {
             margin-bottom : $a12;
+            display: flex;
+            justify-content : flex-start;
+            align-items : flex-start;
             a {
               font-family: 'GilroyMedium';
               font-size: $a12;
