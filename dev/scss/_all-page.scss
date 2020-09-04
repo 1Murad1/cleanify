@@ -521,6 +521,9 @@ body {
         .footer_menu {
           li {
             margin-bottom : $a12;
+            display: flex;
+            justify-content : flex-start;
+            align-items : flex-start;
             a {
               font-family: 'GilroyMedium';
               font-size: $a12;
