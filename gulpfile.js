@@ -81,7 +81,7 @@ gulp.task('img', function() {
 
 gulp.task('img_size', function () {
     return gulp.src(['dev/img-big/**/*.*', '!dev/img-big/**/*.svg', '!dev/img-big/mobi/**/*.*'])
-        .pipe(newer('dev/img-big/mobi'))
+        .pipe(newer('dev/img-big/mobi/**/*.*'))
         .pipe(responsive({
             '**/*': {
                 width: '50%',
@@ -93,7 +93,7 @@ gulp.task('img_size', function () {
 });
 
 gulp.task('img_webp', function () {
-    return gulp.src(['dev/img-big/**/*.*', '!dev/img-big/**/*.svg', '!dev/img-big/webp/**/*.*', '!dev/img-big/mobi/**/*.*'])
+    return gulp.src(['dev/img-big/**/*.{png, jpg}', '!dev/img-big/webp/**/*.*', '!dev/img-big/mobi/**/*.*'])
         .pipe(newer('dev/img-big/webp'))
         .pipe(webp())
         .pipe(gulp.dest('dev/img-big/webp', function(file) {
@@ -109,5 +109,5 @@ gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'scripts', 'html', gulp
     gulp.watch('dev/scss/**/*.scss', gulp.series(/*'clean_css',*/ 'sass'));
     gulp.watch('dev/temp/**/*.html', gulp.series(/*'clean_html',*/ 'html'));
     gulp.watch('dev/js/**/*.js', gulp.series('scripts', browserSync.reload));
-    gulp.watch('dev/img-big/', gulp.series('img_webp', 'img_size', 'img'));
+    gulp.watch('dev/img-big/**/*.{png, jpg, svg}', gulp.series('img_webp', 'img_size', 'img'));
 })));

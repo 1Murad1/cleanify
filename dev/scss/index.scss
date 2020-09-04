@@ -6,8 +6,7 @@
 
 #main {
     .block_one {
-        background: url(../img/main/main_banner.png) no-repeat;
-        background-size: auto;
+        background: url(/img/main/main_banner.png) no-repeat 0 0 / 88.5% auto;
         height : 100vh;
         background-position-x: right;
         .container {
@@ -52,9 +51,8 @@
         }
     }
     .block_two {
-        padding-top : $a120;
         position : relative;
-        padding-bottom: $a150;
+        padding-bottom: $a250;
         .img_banner {
             position: absolute;
             width: $a768;
@@ -106,31 +104,72 @@
     .block_three {
         display: flex;
         align-items: center;
-        background: url("../img/main/bg_three.png") no-repeat;
+        background: url("/img/main/bg_three.png") no-repeat;
         background-size: 100%;
-        height : 680px;
+        height : $a680;
         .container {
-            padding: 0 $a90;
+            padding: 0 $a70;
             align-items: center;
             display: flex;
             justify-content : space-between;
             .columns {
+                &:nth-of-type(1) {
+                    .item {
+                        &:nth-of-type(1), &:nth-of-type(4) {
+                            position : relative;
+                            right: -$a20;
+                        }
+                        @for $i from 1 through 4 {
+                            &:nth-of-type(#{$i}) {
+                                transform: skewX(#{-20 + ($i - 1) * 12}deg);
+                                p {
+                                    transform: skewX(#{20 - ($i - 1) * 12}deg);
+                                }
+                                .bg {
+                                    img {
+                                        transform: skewX(#{20 - ($i - 1) * 12}deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(3) {
+                    .item {
+                        &:nth-of-type(1), &:nth-of-type(4) {
+                            position : relative;
+                            left: -$a20;
+                        }
+                        @for $i from 1 through 4 {
+                            &:nth-of-type(#{$i}) {
+                                transform: skewX(#{20 - ($i - 1) * 12}deg);
+                                p {
+                                    transform: skewX(#{-20 + ($i - 1) * 12}deg);
+                                }
+                                .bg {
+                                    img {
+                                        transform: skewX(#{-20 + ($i - 1) * 12}deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 .item {
                     padding: $a8 $a16 $a8 $a35;
                     background: rgba(255, 255, 255, 0.15);
                     backdrop-filter: blur($a30);
                     border-radius: $a24;
-                    transform: matrix(1, 0, -.4, 1, 0, 0);
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    margin : $a32 0;
                     p {
                         margin-right: $a10;
                         font-family: 'GilroyBold';
                         font-size: $a18;
                         line-height: $a22;
                         color: #FFFFFF;
-                        transform: matrix(1, 0, .4, 1, 0, 0);
                         opacity: 1;
                     }
                     .bg {
@@ -144,7 +183,6 @@
                         border-radius: $a16;
                         img {
                             width: $a32;
-                            transform: matrix(1, 0, .4, 1, 0, 0);
                         }
                     }
                 }
@@ -153,12 +191,28 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                p {
+                    margin-top : $a16;
+                    margin-bottom : $a32;
+                }
             }
         }
     }
     .block_four {
         padding-top : $a144;
         padding-bottom : $a90;
+        position : relative;
+        &:before {
+            content : '';
+            position: absolute;
+            width: $a247;
+            height: $a247;
+            background : linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, rgba(0,0,0,.1);
+            background-size : $a22 $a22;
+            top : $a81;
+            left : $a112;
+            z-index : -1;
+        }
         .container {
             display: flex;
             justify-content: space-between;
@@ -198,11 +252,44 @@
     }
     .block_five {
         padding-top : $a90;
-        padding-bottom : $a145;
+        padding-bottom : $a230;
+        position : relative;
+        &:before {
+            content : '';
+            position: absolute;
+            width: $a285;
+            height: $a285;
+            background : linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, rgba(0,0,0,.1);
+            background-size : $a22 $a22;
+            top : 0;
+            right : $a655;
+            z-index : -1;
+        }
         .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 $a70;
+            &:before {
+                content : '';
+                position: absolute;
+                width: $a545;
+                height: $a545;
+                left: $a270;
+                top: $a40;
+                background: #F9F9F9;
+                border-radius : 50%;
+            }
+            &:after {
+                position: absolute;
+                width: $a157;
+                height: $a157;
+                left: $a760;
+                bottom : $a70;
+                content : '';
+                background: #F9F9F9;
+                border-radius : 50%;
+            }
             .left_block {
                 .lists {
                     padding-left : $a125;
@@ -216,10 +303,12 @@
                         padding-left : $a35;
                         &:before {
                             position : absolute;
-                            content: url("../img/icons/main/check.svg");
+                            content: '';
                             width : $a24;
+                            height : $a24;
                             left : 0;
-                            top : 2px;
+                            top : $a2;
+                            background : url("/img/icons/main/check.svg") no-repeat 0 0 / 100% 100%;
                         }
                     }
                 }
@@ -242,6 +331,18 @@
     }
     .block_slider {
         padding-bottom : $a220;
+        position : relative;
+        &:before {
+            content : '';
+            position: absolute;
+            width: $a285;
+            height: $a285;
+            background : linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, rgba(0,0,0,.1);
+            background-size : $a22 $a22;
+            top : -$a20;
+            left : $a313;
+            z-index : -1;
+        }
         .container {
             .slider {
                 .slide {
@@ -278,8 +379,7 @@
     }
     .block_six {
         padding: $a110 0 $a118;
-        background: url("../img/main/background_six.png") no-repeat;
-        background-size: auto;
+        background: url("/img/main/background_six.png") no-repeat 0 0 / auto 100%;
         .container {
             h2 {
                 margin-bottom : $a16;

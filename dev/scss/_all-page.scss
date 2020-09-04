@@ -1,5 +1,6 @@
 @import "_pxTOvw.scss";
-@import "jquery.fancybox.min";
+@import "jquery.formstyler";
+@import "jquery.formstyler.theme";
 
 $osn-col: #161F32;
 
@@ -12,7 +13,7 @@ $osn-col: #161F32;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000;
+  background: #3f5c86;
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
@@ -63,8 +64,17 @@ p {
   opacity: .7;
   //line-height : $a26;
 }
-.slick-next:before, .slick-prev:before {
-  color: #204479;
+.slick-next, .slick-prev {
+  width : auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:before {
+    color: #204479;
+    font-size : $a30;
+    font-weight : 900;
+  }
 }
 a:focus, a:hover {
   text-decoration: none; }
@@ -141,6 +151,18 @@ a {
     font-size: 0;
     transition: all 0.5s;
   }
+  &.reverse {
+    background: none;
+    box-shadow : none;
+    padding : $a10 $a32;
+    &:hover {
+      background: #4FE5E2;
+    }
+  }
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
   &.error {
     background: red !important;
     font-size: 0;
@@ -158,10 +180,6 @@ a {
       content: 'Форма успешно отправлена';
       font-size: $a24;
     }
-  }
-  &:hover {
-    background-color: #fff;
-    color: #000;
   }
   &.small {
     padding: 0 $a10;
@@ -245,7 +263,7 @@ body {
 
 #header {
   padding-top : $a70;
-  position: fixed;
+  position: absolute;
   z-index : 1;
   top : 0;
   width : 100%;
@@ -263,13 +281,17 @@ body {
     .phone_number {
       a {
         position   : relative;
-        font-family: 'GilroySemiBold';
+        font-family: 'GilroyRegular';
         font-size: $a16;
         line-height: $a22;
         color: #FFFFFF;
+        transition: all 0.5s;
+        &:hover {
+          color : #4fe5e2;
+        }
         &:before {
           position : absolute;
-          content: url("../img/icons/header/phone.svg");
+          content: url("/img/icons/header/phone.svg");
           width: $a16;
           left : -$a25;
           top : 2px;
@@ -290,19 +312,24 @@ body {
             line-height: $a22;
             color: #FFFFFF;
             opacity: 0.5;
-            transition: .1s all;
-            &:hover {
-              opacity: 1;
-            }
-            &:hover:before {
+            transition: all 0.5s;
+            &:before {
               position: absolute;
               content: "";
               bottom : -$a8;
               left : -25%;
-              width : 70%;
-              height : 2px;
+              width : 0;
+              transition: all 0.5s;
+              height : $a2;
+              min-height: 1px;
               background: #4FE5E2;
               border-radius: 2px;
+            }
+            &:hover {
+              opacity: 1;
+              &:before {
+                width : 70%;
+              }
             }
           }
         }
@@ -319,6 +346,10 @@ body {
       font-size: $a16;
       line-height: $a19;
       color: #FFFFFF;
+      transition: all 0.5s;
+      &:hover {
+        background : #4FE5E2;
+      }
     }
   }
 }
@@ -342,6 +373,112 @@ body {
   //    border-bottom: 100px solid red;
   //    border-left: 100px solid transparent;
   //}
+  .jq-selectbox {
+    font-family: "GilroyMedium";
+    font-size: $a16;
+    line-height: $a19;
+    color: #161F32;
+    //opacity: 0.7;
+    width: $a215;
+    cursor: pointer;
+    background: rgba(79, 229, 226, 0.2);
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: $a16;
+    &.opened {
+      border-radius: $a16 $a16 0 0;
+      .jq-selectbox__select {
+        border-bottom : 1px solid #4FE5E255;
+        border-radius: $a16 $a16 0 0;
+        .jq-selectbox__trigger {
+          padding-bottom: 0;
+          padding-top: $a5;
+          .jq-selectbox__trigger-arrow {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    select {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0;
+    }
+    .jq-selectbox__select {
+      /*color: #959595;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+      cursor: pointer;*/
+      border: 1px solid #4FE5E2;
+      border-radius: $a16;
+      background : none;
+      padding: $a16;
+      width : auto;
+      height : $a24;
+      box-sizing: content-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow : none;
+      .jq-selectbox__trigger {
+        position : static;
+        width : auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        transition: all 0.5s;
+        border : none;
+        padding-bottom : $a5;
+        .jq-selectbox__trigger-arrow {
+          transform: rotate(225deg);
+          width: $a10;
+          height: $a10;
+          border : none;
+          position: static;
+          border-top: $a1 solid #000;
+          border-left: $a1 solid #000;
+          transition: all 0.5s;
+        }
+      }
+    }
+    .jq-selectbox__dropdown {
+      background: linear-gradient(0deg, rgba(79, 229, 226, 0.2) 100%, rgba(79, 229, 226, 0.2) 100%), #fff;
+      box-shadow: 0 $a3 $a24 0 rgba(0, 0, 0, 0.09);
+      border: 1px solid #4FE5E2;
+      border-top: 1px solid #4FE5E255;
+      width: 100%;
+      color: #000;
+      border-radius: 0 0 $a5 $a5;
+      transform: translateY(-$a1);
+      box-sizing: border-box;
+      z-index: 1;
+      ul {
+        li {
+          height: $a55;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 0 $a30;
+          transition: all 0.5s;
+          cursor: pointer;
+          &.sel {
+            color: #000;
+            background : rgba(0,0,0,.2);
+          }
+          &:hover {
+            background : rgba(0,0,0,.1);
+            color : #000;
+          }
+        }
+      }
+    }
+  }
   select {
     font-family: "GilroyMedium";
     font-size: $a16;
@@ -387,12 +524,16 @@ body {
               font-size: $a12;
               line-height: $a22;
               color: #161F32;
-              //opacity: 0.7;
+              transition: all 0.5s;
+              &:hover {
+                color : #4fe5e2;
+              }
             }
           }
         }
         .phone_footer, .mail_footer {
-          display: block;
+          display: flex;
+          align-items: center;
           position: relative;
           font-family: 'GilroyMedium';
           font-size: $a12;
@@ -401,18 +542,26 @@ body {
           padding-left : $a25;
         }
         .phone_footer {
+          transition: all 0.5s;
+          &:hover {
+            color : #4fe5e2;
+          }
           &:before {
             position: absolute;
-            content: url("../img/icons/footer/phone_footer.svg");
+            content: url("/img/icons/footer/phone_footer.svg");
             width: $a16;
             height : $a16;
             left : 0;
           }
         }
         .mail_footer {
+          transition: all 0.5s;
+          &:hover {
+            color : #4fe5e2;
+          }
           &:before {
             position: absolute;
-            content: url("../img/icons/footer/email.svg");
+            content: url("/img/icons/footer/email.svg");
             width: $a16;
             height : $a16;
             left : 0;
@@ -425,6 +574,10 @@ body {
           align-items: center;
           padding: $a11 $a15;
           display: inline-flex;
+          transition: all 0.5s;
+          &:hover {
+            background : #F4F4F4;
+          }
           img {
             width : $a18;
             margin-bottom : 0;

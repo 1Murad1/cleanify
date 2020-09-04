@@ -274,7 +274,7 @@
                                 fit all when it comes to deciding how best to sanitize your space.
                                 Cleanify’s customer-centric approach towards germ mitigation
                                 will result in a pristine & healthy space for all.</p>
-                            <a href="#" class="button">Get Cleaning Quote</a>
+                            <a href="#" class="button reverse">Get Cleaning Quote</a>
                         </div>
                     </div>
                 </div>
@@ -392,9 +392,14 @@
                     </div>
                 </div>
             </footer>
-            <script src="js/jquery.min.js"></script>
             <script src="js/libs.min.js"></script>
-            <script src="js/slick.min.js"></script>
             <script src="js/main.js"></script>
+            <script type="text/javascript">
+                (function($) {
+                    $(function() {
+                        $('input, select').styler();
+                    });
+                })(jQuery);
+            </script>
         </body>
     </html>
