@@ -33,7 +33,19 @@
                 width : 100%;
                 display: flex;
                 justify-content : flex-end;
-
+                //.selects_wrapper {
+                //    border-radius: 0!important;
+                //    position: relative;
+                //    &:before {
+                //        border-radius: $a18;
+                //        content: "";
+                //        position: absolute;
+                //        left : 0;
+                //        bottom : 0;
+                //        top : 0;
+                //        width : $a30;
+                //    }
+                //}
             }
 
 
@@ -92,9 +104,57 @@
         }
     }
     .block_three {
+        display: flex;
+        align-items: center;
         background: url("../img/main/bg_three.png") no-repeat;
         background-size: 100%;
         height : 680px;
+        .container {
+            padding: 0 $a90;
+            align-items: center;
+            display: flex;
+            justify-content : space-between;
+            .columns {
+                .item {
+                    padding: $a8 $a16 $a8 $a35;
+                    background: rgba(255, 255, 255, 0.15);
+                    backdrop-filter: blur($a30);
+                    border-radius: $a24;
+                    transform: matrix(1, 0, -.4, 1, 0, 0);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    p {
+                        margin-right: $a10;
+                        font-family: 'GilroyBold';
+                        font-size: $a18;
+                        line-height: $a22;
+                        color: #FFFFFF;
+                        transform: matrix(1, 0, .4, 1, 0, 0);
+                        opacity: 1;
+                    }
+                    .bg {
+                        width: $a86;
+                        display: flex;
+                        justify-content : center;
+                        align-items: center;
+                        height: $a66;
+                        background: rgba(255, 255, 255, 0.5);
+                        backdrop-filter: blur($a100);
+                        border-radius: $a16;
+                        img {
+                            width: $a32;
+                            transform: matrix(1, 0, .4, 1, 0, 0);
+                        }
+                    }
+                }
+            }
+            .center {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     }
     .block_four {
         padding-top : $a144;

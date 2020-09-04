@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aac2ecf9-ae21-48bf-ad6d-22b036c5c2b5" name="Default Changelist" comment="" />
+    <list default="true" id="aac2ecf9-ae21-48bf-ad6d-22b036c5c2b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/maps/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/maps/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dev/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/temp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/temp/index.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gvKEZIpyqQlKxyeE1uVoeuGwot" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -40,10 +52,25 @@
       <workItem from="1599063301179" duration="15610000" />
       <workItem from="1599103512930" duration="5082000" />
       <workItem from="1599120609356" duration="11398000" />
+      <workItem from="1599153721288" duration="3234000" />
+      <workItem from="1599161940003" duration="5333000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
