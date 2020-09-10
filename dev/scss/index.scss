@@ -81,7 +81,7 @@
             width: $a650;
             height: $a234;
             left: $a170;
-            top : $a367;
+            top : $a257;
             background: rgba(32, 68, 121, 0.3);
             backdrop-filter: blur(60px);
             transform: matrix(1, 0, 0.35, 1, 0, 0);
@@ -92,13 +92,13 @@
         .wrapper_text {
             position: absolute;
             z-index : 1;
-            top: $a410;
+            top: $a300;
             left: $a280;
             h2 {
 
             }
             p {
-                font-family: 'GilroySemiBold';
+                font-family: 'GilroyRegular';
                 font-size: $a18;
                 line-height: $a26;
                 color: rgba(255, 255, 255, 0.8);
@@ -471,11 +471,9 @@
             position: absolute;
             top : $a15;
             right : $a15;
-            background : linear-gradient(to bottom, transparent 40%, #000 40%, #000 60%, transparent 60%), linear-gradient(to right, transparent 40%, #000 40%, #000 60%, transparent 60%);
             width : $a20;
-            height : $a20;
-            transform: rotate(45deg);
             cursor: pointer;
+            filter: invert(1);
         }
         .title {
             font-family : 'GilroySemiBold';
@@ -545,8 +543,53 @@
 }
 
 @media screen and (max-width: 1023px) {
-    #main {
-
+    .popup {
+        align-items: flex-end;
+        form {
+            width : calc(100% - #{$m32});
+            padding : $m24;
+            border-radius : $m24 $m24 0 0;
+            .close {
+                width : $m15;
+                top : $m10;
+                right : $m10;
+            }
+            .title {
+                font-size : $m24 !important;
+                line-height : inherit !important;
+                font-family : 'GilroyBold';
+                margin-bottom : $m24;
+            }
+            &>input {
+                font-size : $m14;
+                height : $m48;
+                width : 100%;
+                border-radius : $m16;
+                padding-left : $m16;
+                margin-bottom : $m8;
+            }
+            button {
+                height : $m48;
+                border-radius : $m16;
+                font-size : $m16;
+            }
+            label {
+                font-size : $m12;
+                margin-top : $m16;
+                .jq-checkbox {
+                    font-size : $m12;
+                    border-radius : $m4;
+                    width : $m16;
+                    height : $m16;
+                    margin-right : $m7;
+                    .jq-checkbox__div {
+                        width : $m10;
+                        height : $m5;
+                        margin-bottom : $m2;
+                    }
+                }
+            }
+        }
     }
 }
 

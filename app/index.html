@@ -45,8 +45,47 @@
                         </ul>
                     </nav>
                     <button class="btn_popup">Free Quote</button>
+                    <div class="burger" onclick="$('.mobile-menu').addClass('open')">
+                        <img src="/img/icons/menu.svg" alt="" />
+                    </div>
                 </div>
             </header>
+            
+            <div class="mobile-menu">
+                <div class="holder">
+                    <div class="logo">
+                        <a href="/"><img src="img/icons/header/logo.svg" alt="logo" /></a>
+                        <img src="/img/icons/menuclose.svg" alt="" class="close" onclick="$('.mobile-menu').removeClass('open')"/>
+                    </div>
+                    <nav class="nav">
+                        <ul class="menu">
+                            <li>
+                                <a href="#services" onclick="$('.mobile-menu').removeClass('open')">Services</a>
+                            </li>
+                            <li>
+                                <a href="#industries" onclick="$('.mobile-menu').removeClass('open')">Industries</a>
+                            </li>
+                            <li>
+                                <a href="#process" onclick="$('.mobile-menu').removeClass('open')">Process</a>
+                            </li>
+                            <li>
+                                <a href="#why-us" onclick="$('.mobile-menu').removeClass('open')">Why Us?</a>
+                            </li>
+                            <li>
+                                <a href="#blog" onclick="$('.mobile-menu').removeClass('open')">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="contact">
+                        <h5>Contacts</h5>
+                        <a href="https://goo.gl/maps/BSGNsV8954N2r5w49">1377 E 4th St
+                            Brooklyn, NY 11230</a>
+                        <a href="tel: 800-597-8687" class="phone_footer">800-597-8687</a>
+                        <a href="mailto:info@cleanify.com" class="mail_footer">info@cleanify.com</a>
+                    </div>
+                    <button class="button reverse">Free Quote</button>
+                </div>
+            </div>
             <main id="main">
                 <div class="block_one">
                     <div class="container">
@@ -54,7 +93,7 @@
                         <p>Feel the touch of the best cleaning service in Brooklyn</p>
                         <div class="wrapper">
                             <form class="selects_wrapper">
-                                <select name="select">
+                                <select name="typeHouse">
                                     <option value="Industry" disabled selected>Industry</option>
                                     <option value="Corporate Offices">Corporate Offices</option>
                                     <option value="Residential Cleaning ">Residential Cleaning</option>
@@ -65,22 +104,22 @@
                                     <option value="Retail Storefronts">Retail Storefronts</option>
                                     <option value="Hospitality">Hospitality</option>
                                 </select>
-                                <select name="select">
+                                <select name="quantityBedroom">
                                     <option value="Studio">Studio</option>
                                     <option value="1 Bedroom">1 Bedroom</option>
-                                    <option value="2 Bedrom">2 Bedrom</option>
+                                    <option value="2 Bedroom">2 Bedroom</option>
                                     <option value="3 Bedroom">3 Bedroom</option>
                                     <option value="4 and Up Bedrooms">4 and Up Bedrooms</option>
                                 </select>
-                                <select name="select">
+                                <select name="quantityBathroom">
                                     <option value="1 Bathroom">1 Bathroom</option>
                                     <option value="2 Bathroom">2 Bathroom</option>
                                     <option value="3 Bathroom">3 Bathroom</option>
                                     <option value="4 and Up Bathroom">4 and Up Bathroom</option>
                                 </select>
-                                <select name="select">
-                                    <option value="Standart">Standart</option>
-                                    <option value="Standart + Windows ">Standart + Windows</option>
+                                <select name="typeCleaning">
+                                    <option value="Standard">Standard</option>
+                                    <option value="Standard + Windows ">Standard + Windows</option>
                                     <option value="Cleanify Deep Cleaning">Cleanify Deep Cleaning (deep cleaning + disinfectant + antimicrobial coating+extra adds on+complementary)</option>
                                     <option value="Moving in/out">Moving in/out (Moving is overwhelming. Let us take care of cleaning.)</option>
                                 </select>
@@ -315,11 +354,12 @@
                 </div>
                 <div class="block_six">
                     <div class="container">
-                        <h2>Book your clean today!</h2>
+                        <h2 class="dekstop_title">Book your clean today!</h2>
+                        <h2 class="mob_title">Get your free cleaning quote today!</h2>
                         <p>Just fill out the form and we will contact you in a few minutes</p>
                         <div class="wrapper">
                             <form class="selects_wrapper">
-                                <select name="select">
+                                <select name="typeHouse">
                                     <option value="Industry" disabled selected>Industry</option>
                                     <option value="Corporate Offices">Corporate Offices</option>
                                     <option value="Residential Cleaning ">Residential Cleaning</option>
@@ -330,22 +370,22 @@
                                     <option value="Retail Storefronts">Retail Storefronts</option>
                                     <option value="Hospitality">Hospitality</option>
                                 </select>
-                                <select name="select">
+                                <select name="quantityBedroom">
                                     <option value="Studio">Studio</option>
                                     <option value="1 Bedroom">1 Bedroom</option>
-                                    <option value="2 Bedrom">2 Bedrom</option>
+                                    <option value="2 Bedroom">2 Bedroom</option>
                                     <option value="3 Bedroom">3 Bedroom</option>
                                     <option value="4 and Up Bedrooms">4 and Up Bedrooms</option>
                                 </select>
-                                <select name="select">
+                                <select name="quantityBathroom">
                                     <option value="1 Bathroom">1 Bathroom</option>
                                     <option value="2 Bathroom">2 Bathroom</option>
                                     <option value="3 Bathroom">3 Bathroom</option>
                                     <option value="4 and Up Bathroom">4 and Up Bathroom</option>
                                 </select>
-                                <select name="select">
-                                    <option value="Standart">Standart</option>
-                                    <option value="Standart + Windows ">Standart + Windows</option>
+                                <select name="typeCleaning">
+                                    <option value="Standard">Standard</option>
+                                    <option value="Standard + Windows ">Standard + Windows</option>
                                     <option value="Cleanify Deep Cleaning">Cleanify Deep Cleaning (deep cleaning + disinfectant + antimicrobial coating+extra adds on+complementary)</option>
                                     <option value="Moving in/out">Moving in/out (Moving is overwhelming. Let us take care of cleaning.)</option>
                                 </select>
@@ -367,7 +407,7 @@
                                 down, but that we develop a custom plan for your particular
                                 needs that abide to all CDC & EPA guidelines.</p>
                         </div>
-                        <div class="item">
+                        <div class="item mob_n">
                             <h5>Menu</h5>
                             <ul class="footer_menu">
                                 <li>
@@ -384,17 +424,17 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="item">
+                        <div class="item mob_n">
                             <h5>Our Address</h5>
-                            <p>1377 E 4th St
-                                Brooklyn, NY 11230</p>
+                            <a href="https://goo.gl/maps/BSGNsV8954N2r5w49">1377 E 4th St
+                                Brooklyn, NY 11230</a>
                         </div>
-                        <div class="item">
+                        <div class="item w_full">
                             <h5>Contacts</h5>
                             <a href="tel: 800-597-8687" class="phone_footer">800-597-8687</a>
                             <a href="mailto:info@cleanify.com" class="mail_footer">info@cleanify.com</a>
                         </div>
-                        <div class="item">
+                        <div class="item w_full">
                             <h5>Get Social</h5>
                             <a href="#" class="social fb">
                                 <img src="img/icons/footer/facebook.svg" alt="fb" />
@@ -422,7 +462,7 @@
             </footer>
             <div class="popup" style="display: none;">
                 <form>
-                    <div class="close"></div>
+                    <img src="/img/icons/close.svg" alt="" class="close" onclick="$('.popup').removeClass('select').fadeOut()"/>
                     <p class="title">Get Cleaning Quote</p>
                     <input required type="text" name="name" placeholder="Name">
                     <input required type="tel" name="phone" placeholder="Phone">
@@ -446,7 +486,7 @@
                     });
                     $(document).ready(function () {
                         $('.popup .close').click(function () {
-                            $('.popup').removeClass('select').fadeOut()
+
                         })
                     })
                 })(jQuery);

@@ -17,18 +17,127 @@
                 <p>Reduce the spread of coronavirus. COVID-19 cleaning services now available. <a href="javascript: void(0)">Learn more</a></p>
                 <button class="close"><img src="/img/icons/close.svg" alt="close" onclick="document.querySelector('.covid').style.display = 'none'" /></button>
             </div>
-            //= include/header.html
+            <header id="header">
+                <div class="container">
+                    <div class="logo">
+                        <a href="/"><img src="img/icons/header/logo.svg" alt="logo" /></a>
+                    </div>
+                    <div class="phone_number">
+                        <a href="tel: 800-597-8687">800-597-8687</a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="menu">
+                            <li>
+                                <a href="#services">Services</a>
+                            </li>
+                            <li>
+                                <a href="#industries">Industries</a>
+                            </li>
+                            <li>
+                                <a href="#process">Process</a>
+                            </li>
+                            <li>
+                                <a href="#why-us">Why Us?</a>
+                            </li>
+                            <li>
+                                <a href="#blog">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="btn_popup">Free Quote</button>
+                    <div class="burger" onclick="$('.mobile-menu').addClass('open')">
+                        <img src="/img/icons/menu.svg" alt="" />
+                    </div>
+                </div>
+            </header>
+            
+            <div class="mobile-menu">
+                <div class="holder">
+                    <div class="logo">
+                        <a href="/"><img src="img/icons/header/logo.svg" alt="logo" /></a>
+                        <img src="/img/icons/menuclose.svg" alt="" class="close" onclick="$('.mobile-menu').removeClass('open')"/>
+                    </div>
+                    <nav class="nav">
+                        <ul class="menu">
+                            <li>
+                                <a href="#services" onclick="$('.mobile-menu').removeClass('open')">Services</a>
+                            </li>
+                            <li>
+                                <a href="#industries" onclick="$('.mobile-menu').removeClass('open')">Industries</a>
+                            </li>
+                            <li>
+                                <a href="#process" onclick="$('.mobile-menu').removeClass('open')">Process</a>
+                            </li>
+                            <li>
+                                <a href="#why-us" onclick="$('.mobile-menu').removeClass('open')">Why Us?</a>
+                            </li>
+                            <li>
+                                <a href="#blog" onclick="$('.mobile-menu').removeClass('open')">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="contact">
+                        <h5>Contacts</h5>
+                        <a href="https://goo.gl/maps/BSGNsV8954N2r5w49">1377 E 4th St
+                            Brooklyn, NY 11230</a>
+                        <a href="tel: 800-597-8687" class="phone_footer">800-597-8687</a>
+                        <a href="mailto:info@cleanify.com" class="mail_footer">info@cleanify.com</a>
+                    </div>
+                    <button class="button reverse">Free Quote</button>
+                </div>
+            </div>
             <main id="main">
                 <div class="block_one">
                     <div class="container">
                         <h1>Cleaning You <span class="color">Can Trust</span></h1>
                         <p>Feel the touch of the best cleaning service in Brooklyn</p>
-                        //= include/select.html
+                        <div class="wrapper">
+                            <form class="selects_wrapper">
+                                <select name="typeHouse">
+                                    <option value="Industry" disabled selected>Industry</option>
+                                    <option value="Corporate Offices">Corporate Offices</option>
+                                    <option value="Residential Cleaning ">Residential Cleaning</option>
+                                    <option value="Religious Facility">Religious Facility</option>
+                                    <option value="Fitness Locations">Fitness Locations</option>
+                                    <option value="Educational Facilities">Educational Facilities</option>
+                                    <option value="Medical Facilities">Medical Facilities</option>
+                                    <option value="Retail Storefronts">Retail Storefronts</option>
+                                    <option value="Hospitality">Hospitality</option>
+                                </select>
+                                <select name="quantityBedroom">
+                                    <option value="Studio">Studio</option>
+                                    <option value="1 Bedroom">1 Bedroom</option>
+                                    <option value="2 Bedroom">2 Bedroom</option>
+                                    <option value="3 Bedroom">3 Bedroom</option>
+                                    <option value="4 and Up Bedrooms">4 and Up Bedrooms</option>
+                                </select>
+                                <select name="quantityBathroom">
+                                    <option value="1 Bathroom">1 Bathroom</option>
+                                    <option value="2 Bathroom">2 Bathroom</option>
+                                    <option value="3 Bathroom">3 Bathroom</option>
+                                    <option value="4 and Up Bathroom">4 and Up Bathroom</option>
+                                </select>
+                                <select name="typeCleaning">
+                                    <option value="Standard">Standard</option>
+                                    <option value="Standard + Windows ">Standard + Windows</option>
+                                    <option value="Cleanify Deep Cleaning">Cleanify Deep Cleaning (deep cleaning + disinfectant + antimicrobial coating+extra adds on+complementary)</option>
+                                    <option value="Moving in/out">Moving in/out (Moving is overwhelming. Let us take care of cleaning.)</option>
+                                </select>
+                                <a href="javascript: void(0)" onclick="$('.popup').addClass('select').fadeIn()" class="button">Get Cleaning Quote</a>
+                            </form>
+                        </div>
 
                     </div>
                 </div>
                 <div id="services" class="block_two">
+                    
+                <picture>
+                    <source srcset="/img/mobi/webp/main/people.webp"  type="image/webp" media="(max-width: 1023px)">
+                    <source srcset="/img/mobi/main/people.png"  type="image/png" media="(max-width: 1023px)">
+                    <source srcset="/img/webp/main/people.webp"  type="image/webp">
                     <img class="img_banner" src="/img/main/people.png" alt="people.img" />
+                </picture>
+            
                     <div class="banner_block">
 
 
@@ -248,15 +357,112 @@
                         <h2 class="dekstop_title">Book your clean today!</h2>
                         <h2 class="mob_title">Get your free cleaning quote today!</h2>
                         <p>Just fill out the form and we will contact you in a few minutes</p>
-                        //= include/select.html
+                        <div class="wrapper">
+                            <form class="selects_wrapper">
+                                <select name="typeHouse">
+                                    <option value="Industry" disabled selected>Industry</option>
+                                    <option value="Corporate Offices">Corporate Offices</option>
+                                    <option value="Residential Cleaning ">Residential Cleaning</option>
+                                    <option value="Religious Facility">Religious Facility</option>
+                                    <option value="Fitness Locations">Fitness Locations</option>
+                                    <option value="Educational Facilities">Educational Facilities</option>
+                                    <option value="Medical Facilities">Medical Facilities</option>
+                                    <option value="Retail Storefronts">Retail Storefronts</option>
+                                    <option value="Hospitality">Hospitality</option>
+                                </select>
+                                <select name="quantityBedroom">
+                                    <option value="Studio">Studio</option>
+                                    <option value="1 Bedroom">1 Bedroom</option>
+                                    <option value="2 Bedroom">2 Bedroom</option>
+                                    <option value="3 Bedroom">3 Bedroom</option>
+                                    <option value="4 and Up Bedrooms">4 and Up Bedrooms</option>
+                                </select>
+                                <select name="quantityBathroom">
+                                    <option value="1 Bathroom">1 Bathroom</option>
+                                    <option value="2 Bathroom">2 Bathroom</option>
+                                    <option value="3 Bathroom">3 Bathroom</option>
+                                    <option value="4 and Up Bathroom">4 and Up Bathroom</option>
+                                </select>
+                                <select name="typeCleaning">
+                                    <option value="Standard">Standard</option>
+                                    <option value="Standard + Windows ">Standard + Windows</option>
+                                    <option value="Cleanify Deep Cleaning">Cleanify Deep Cleaning (deep cleaning + disinfectant + antimicrobial coating+extra adds on+complementary)</option>
+                                    <option value="Moving in/out">Moving in/out (Moving is overwhelming. Let us take care of cleaning.)</option>
+                                </select>
+                                <a href="javascript: void(0)" onclick="$('.popup').addClass('select').fadeIn()" class="button">Get Cleaning Quote</a>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
             </main>
-            //= include/footer.html
+            <footer id="footer">
+                <div class="footer_top">
+                    <div class="container">
+                        <div class="item">
+                            <img src="/img/icons/footer/logo_footer.svg" alt="logo_footer" />
+                            <p>Our approach includes a transparent, affordable and quick
+                                service that will stand the test of time. We go to great lengths
+                                to ensure that your high touch surfaces are not just wiped
+                                down, but that we develop a custom plan for your particular
+                                needs that abide to all CDC & EPA guidelines.</p>
+                        </div>
+                        <div class="item mob_n">
+                            <h5>Menu</h5>
+                            <ul class="footer_menu">
+                                <li>
+                                    <a href="#">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#">Industries</a>
+                                </li>
+                                <li>
+                                    <a href="#">Process</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item mob_n">
+                            <h5>Our Address</h5>
+                            <a href="https://goo.gl/maps/BSGNsV8954N2r5w49">1377 E 4th St
+                                Brooklyn, NY 11230</a>
+                        </div>
+                        <div class="item w_full">
+                            <h5>Contacts</h5>
+                            <a href="tel: 800-597-8687" class="phone_footer">800-597-8687</a>
+                            <a href="mailto:info@cleanify.com" class="mail_footer">info@cleanify.com</a>
+                        </div>
+                        <div class="item w_full">
+                            <h5>Get Social</h5>
+                            <a href="#" class="social fb">
+                                <img src="img/icons/footer/facebook.svg" alt="fb" />
+                            </a>
+                            <a href="#" class="social inst">
+                                <img src="img/icons/footer/instagram.svg" alt="inst" />
+                            </a>
+                            <a href="#" class="social pint">
+                                <img src="img/icons/footer/pinterest.svg" alt="pint" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="container">
+                        <p>2020 © All Rights Reserved.</p>
+                        <p>Privacy Policy | Terms of Services</p>
+                        <div class="wrap">
+                            <p>Designed and
+                                maintained by</p>
+                            <img src="../img/icons/footer/sub_logo.svg" alt="sub_logo" />
+                        </div>
+                    </div>
+                </div>
+            </footer>
             <div class="popup" style="display: none;">
                 <form>
-                    <img src="/img/icons/close.svg" alt="" class="close" onclick="$('.popup').removeClass('select').fadeOut()"/>
+                    <div class="close"></div>
                     <p class="title">Get Cleaning Quote</p>
                     <input required type="text" name="name" placeholder="Name">
                     <input required type="tel" name="phone" placeholder="Phone">
@@ -280,7 +486,7 @@
                     });
                     $(document).ready(function () {
                         $('.popup .close').click(function () {
-
+                            $('.popup').removeClass('select').fadeOut()
                         })
                     })
                 })(jQuery);

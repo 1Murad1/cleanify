@@ -26,5 +26,44 @@
             </ul>
         </nav>
         <button class="btn_popup">Free Quote</button>
+        <div class="burger" onclick="$('.mobile-menu').addClass('open')">
+            <img src="/img/icons/menu.svg" alt="" />
+        </div>
     </div>
 </header>
+
+<div class="mobile-menu">
+    <div class="holder">
+        <div class="logo">
+            <a href="/"><img src="img/icons/header/logo.svg" alt="logo" /></a>
+            <img src="/img/icons/menuclose.svg" alt="" class="close" onclick="$('.mobile-menu').removeClass('open')"/>
+        </div>
+        <nav class="nav">
+            <ul class="menu">
+                <li>
+                    <a href="#services" onclick="$('.mobile-menu').removeClass('open')">Services</a>
+                </li>
+                <li>
+                    <a href="#industries" onclick="$('.mobile-menu').removeClass('open')">Industries</a>
+                </li>
+                <li>
+                    <a href="#process" onclick="$('.mobile-menu').removeClass('open')">Process</a>
+                </li>
+                <li>
+                    <a href="#why-us" onclick="$('.mobile-menu').removeClass('open')">Why Us?</a>
+                </li>
+                <li>
+                    <a href="#blog" onclick="$('.mobile-menu').removeClass('open')">Blog</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="contact">
+            <h5>Contacts</h5>
+            <a href="https://goo.gl/maps/BSGNsV8954N2r5w49">1377 E 4th St
+                Brooklyn, NY 11230</a>
+            <a href="tel: 800-597-8687" class="phone_footer">800-597-8687</a>
+            <a href="mailto:info@cleanify.com" class="mail_footer">info@cleanify.com</a>
+        </div>
+        <button class="button reverse">Free Quote</button>
+    </div>
+</div>
