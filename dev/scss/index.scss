@@ -69,7 +69,7 @@
             width: $a650;
             height: $a234;
             left: $a170;
-            top : $a367;
+            top : $a257;
             background: rgba(32, 68, 121, 0.3);
             backdrop-filter: blur(60px);
             transform: matrix(1, 0, 0.35, 1, 0, 0);
@@ -80,13 +80,13 @@
         .wrapper_text {
             position: absolute;
             z-index : 1;
-            top: $a410;
+            top: $a300;
             left: $a280;
             h2 {
 
             }
             p {
-                font-family: 'GilroySemiBold';
+                font-family: 'GilroyRegular';
                 font-size: $a18;
                 line-height: $a26;
                 color: rgba(255, 255, 255, 0.8);
