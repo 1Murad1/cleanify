@@ -27,7 +27,7 @@
 
                     </div>
                 </div>
-                <div class="block_two">
+                <div id="services" class="block_two">
                     <img class="img_banner" src="/img/main/people.png" alt="people.img" />
                     <div class="banner_block">
 
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="block_three">
+                <div id="industries" class="block_three">
                     <div class="container">
                         <div class="columns">
                             <div class="item wow fadeInLeftNew" data-wow-delay="00ms">
@@ -128,7 +128,7 @@
                         <div class="center">
                             <h2>Industries</h2>
                             <p>There are a few of the industries we serve</p>
-                            <a href="#" class="button">Get Cleaning Quote</a>
+                            <a href="javascript: void(0)" onclick="$('.popup').fadeIn()" class="button">Get Cleaning Quote</a>
                         </div>
                         <div class="columns">
                             <div class="item wow fadeInRightNew" data-wow-delay="00ms">
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="block_four">
+                <div id="process" class="block_four">
                     <div class="container">
                         <div class="left_block">
                             <h3>Our 3 Step Process</h3>
@@ -193,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="block_five">
+                <div id="why-us" class="block_five">
                     <div class="container">
                         <div class="left_block">
                             <ul class="lists">
@@ -218,11 +218,11 @@
                                 fit all when it comes to deciding how best to sanitize your space.
                                 Cleanify’s customer-centric approach towards germ mitigation
                                 will result in a pristine & healthy space for all.</p>
-                            <a href="#" class="button reverse">Get Cleaning Quote</a>
+                            <a href="javascript: void(0)" onclick="$('.popup').fadeIn()" class="button reverse">Get Cleaning Quote</a>
                         </div>
                     </div>
                 </div>
-                <div class="block_slider">
+                <div id="blog" class="block_slider">
                     <div class="container">
                         <div class="slider">
                             <div class="slide">
@@ -253,13 +253,35 @@
 
             </main>
             //= include/footer.html
+            <div class="popup" style="display: none;">
+                <form>
+                    <div class="close"></div>
+                    <p class="title">Get Cleaning Quote</p>
+                    <input required type="text" name="name" placeholder="Name">
+                    <input required type="tel" name="phone" placeholder="Phone">
+                    <input required type="email" name="email" placeholder="Email">
+                    <input required type="text" name="code" placeholder="ZIP Code">
+                    <input type="text" name="m2" placeholder="m²" class="m2">
+                    <button type="submit">Get Cleaning Quote</button>
+                    <label>
+                        <input required type="checkbox" name="agree">
+                        I agree with Cleanify Terms &
+                        Privacy Policy
+                    </label>
+                </form>
+            </div>
             <script src="js/libs.min.js"></script>
             <script src="js/main.js"></script>
             <script type="text/javascript">
                 (function($) {
                     $(function() {
-                        $('input, select').styler();
+                        $('input[type="checkbox"], select').styler();
                     });
+                    $(document).ready(function () {
+                        $('.popup .close').click(function () {
+                            $('.popup').removeClass('select').fadeOut()
+                        })
+                    })
                 })(jQuery);
             </script>
         </body>

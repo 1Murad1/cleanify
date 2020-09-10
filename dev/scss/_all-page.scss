@@ -385,9 +385,33 @@ body {
     background: rgba(79, 229, 226, 0.2);
     box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
     border-radius: $a16;
+    &:last-of-type {
+      .jq-selectbox__dropdown {
+        border-top : 0;
+        border-radius: 0 $a16 $a16 $a16;
+        width : 200% !important;
+        &:before {
+          content    : '';
+          position   : absolute;
+          width      : 100%;
+          top        : 0;
+          right      : 0;
+          height     : 1px;
+          background : linear-gradient(270deg, #204479 50.2%, #4FE5E2 50%);
+        }
+        ul {
+          li {
+            width : 100%;
+            white-space: normal;
+          }
+        }
+      }
+    }
     &.opened {
       border-radius: $a16 $a16 0 0;
+      background : #fff;
       .jq-selectbox__select {
+        border-color : #204479;
         border-bottom : 1px solid #4FE5E255;
         border-radius: $a16 $a16 0 0;
         .jq-selectbox__trigger {
@@ -408,12 +432,6 @@ body {
       opacity: 0;
     }
     .jq-selectbox__select {
-      /*color: #959595;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      height: 100%;
-      cursor: pointer;*/
       border: 1px solid #4FE5E2;
       border-radius: $a16;
       background : none;
@@ -438,8 +456,8 @@ body {
         padding-bottom : $a5;
         .jq-selectbox__trigger-arrow {
           transform: rotate(225deg);
-          width: $a10;
-          height: $a10;
+          width: $a7;
+          height: $a7;
           border : none;
           position: static;
           border-top: $a1 solid #000;
@@ -449,31 +467,51 @@ body {
       }
     }
     .jq-selectbox__dropdown {
-      background: linear-gradient(0deg, rgba(79, 229, 226, 0.2) 100%, rgba(79, 229, 226, 0.2) 100%), #fff;
+      background: #fff;
       box-shadow: 0 $a3 $a24 0 rgba(0, 0, 0, 0.09);
-      border: 1px solid #4FE5E2;
+      border: 1px solid #204479;
       border-top: 1px solid #4FE5E255;
-      width: 100%;
+      width : 100% !important;
       color: #000;
-      border-radius: 0 0 $a5 $a5;
+      border-radius: 0 0 $a16 $a16;
       transform: translateY(-$a1);
       box-sizing: border-box;
       z-index: 1;
       margin-top : 0;
+      overflow : hidden;
       ul {
+        &::-webkit-scrollbar {
+          width: 2px;
+          border-radius : 2px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: #fff;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: #204479;
+          border-radius : 20px;
+          width: 2px;
+        }
+
+        &::-webkit-scrollbar-thumb:window-inactive {
+          background: #204479;
+          border-radius : 20px;
+          width: 2px;
+        }
         li {
-          height: $a45;
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          padding: 0 $a30;
+          padding: $a15 $a30;
           transition: all 0.5s;
           cursor: pointer;
           &.sel {
             color: #000;
-            background : rgba(0,0,0,.2);
+            background : #4FE5E250;
           }
-          &:hover {
+          &:hover:not(.disabled) {
             background : rgba(0,0,0,.1);
             color : #000;
           }

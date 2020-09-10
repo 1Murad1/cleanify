@@ -1,4 +1,5 @@
 @import "_all-page.scss";
+@import "jquery.custom-scrollbar";
 
 #header {
 
@@ -9,6 +10,17 @@
         background: url(/img/main/main_banner.png) no-repeat 0 0 / 88.5% auto;
         height : 100vh;
         background-position-x: right;
+        &:before {
+            content : '';
+            position: absolute;
+            width: $a285;
+            height: $a285;
+            background : linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, rgba(0,0,0,.1);
+            background-size : $a22 $a22;
+            top : $a125;
+            left : 0;
+            z-index : -1;
+        }
         .container {
             padding-top : $a208;
             display: flex;
@@ -419,6 +431,107 @@
                 line-height: $a26;
                 color: rgba(255, 255, 255, 0.8);
                 opacity: 0.8;
+            }
+        }
+    }
+}
+
+.popup {
+    position: fixed;
+    width : 100%;
+    height : 100%;
+    background : rgba(22, 31, 50, 0.7);
+    backdrop-filter: blur(10px);
+    z-index : 10;
+    top : 0;
+    left : 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.select {
+        form {
+            &>input {
+                &.m2 {
+                    display: block;
+                }
+            }
+        }
+    }
+    form {
+        width : $a500;
+        background : #fff;
+        border-radius: $a24;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding : $a40 $a30;
+        position : relative;
+        .close {
+            content : '';
+            position: absolute;
+            top : $a15;
+            right : $a15;
+            background : linear-gradient(to bottom, transparent 40%, #000 40%, #000 60%, transparent 60%), linear-gradient(to right, transparent 40%, #000 40%, #000 60%, transparent 60%);
+            width : $a20;
+            height : $a20;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+        .title {
+            font-family : 'GilroySemiBold';
+            color : #161F32;
+            font-size : $a40;
+            opacity : 1;
+            margin-bottom : $a40;
+        }
+        &>input {
+            background: rgba(79, 229, 226, 0.2);
+            border: 1px solid #4FE5E2;
+            box-sizing: border-box;
+            box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1);
+            border-radius: $a16;
+            width : 100%;
+            height : $a60;
+            padding-left : $a20;
+            margin-bottom : $a15;
+            font-size : $a16;
+            &.m2 {
+                display: none;
+            }
+        }
+        button {
+            width : 100%;
+            height : $a60;
+            background: #4FE5E2;
+            box-shadow: 0px 20px 30px -5px rgba(79, 229, 226, 0.5);
+            border-radius: $a16;
+            font-family : 'GilroySemiBold';
+            font-size : $a24;
+            border : none;
+            color : #204479;
+            margin-bottom : $a30;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .jq-checkbox {
+            background: rgba(79, 229, 226, 0.2);
+            border: 1px solid #4FE5E2;
+            box-sizing: border-box;
+            box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            width : $a20;
+            height : $a20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right : $a10;
+            .jq-checkbox__div {
+                margin: 0;
+                width : $a10;
+                height : $a5;
             }
         }
     }
