@@ -272,6 +272,7 @@
                 position: relative;
                 //z-index : 1;
                 display: flex;
+                background: url('/img/icons/main/dashed.svg') no-repeat 28% 7% / 62% auto;
                 .img_dashed {
                     position: absolute;
                     width: $a470;
@@ -494,6 +495,10 @@
             padding-left : $a20;
             margin-bottom : $a15;
             font-size : $a16;
+            appearance: none;
+            &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+                appearance: none;
+            }
             &.m2 {
                 display: none;
             }
@@ -531,6 +536,7 @@
                 margin: 0;
                 width : $a10;
                 height : $a5;
+                margin-bottom: $a2;
             }
         }
     }
@@ -596,9 +602,7 @@
     #main {
         .block_one {
             height: auto !important;
-            background: url(/img/main/main_banner.png) no-repeat !important;
-            background-position-x: right !important;
-            background-size: cover !important;
+            background: url(/img/main/main_banner.png) no-repeat center 0 / auto 100% !important;
             .container {
                 padding : $m24 0;
                 h1 {
@@ -671,7 +675,8 @@
                 margin-top : $m20;
                 padding : 0;
                 flex-flow: row wrap;
-                justify-content : center;
+                justify-content : space-between;
+                width: 100vw !important;
                 .mob_title {
                     width : 100%;
                     text-align: center;
@@ -680,47 +685,51 @@
                 .center {
                     margin-top : $m8;
                     order: 4;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    .button {
+                        width: auto;
+                    }
                 }
                 .col_l {
                     position: relative;
-                    left : -$m16;
                     .item {
-                        border-top-right-radius: $m8;
-                        border-bottom-right-radius: $m8;
-                        border-bottom-left-radius: 0;
-                        border-top-left-radius: 0;
+                        border-radius: 0 $m8 $m8 0;
+                        padding : $m8 $m8 $m8 $m16;
+                        p {
+                            text-align: right !important;
+                        }
                     }
 
                 }
                 .col_r {
                     position: relative;
-                    right : -$m16;
                     .item {
-                        border-top-right-radius: 0;
-                        border-bottom-right-radius: 0;
-                        border-bottom-left-radius: $m8;
-                        border-top-left-radius: $m8;
+                        border-radius: $m8 0 0 $m8;
+                        flex-direction: row-reverse;
+                        padding : $m8 $m16 $m8 $m8;
                     }
                 }
                 .columns {
-                    width : 50%;
-
+                    width : calc(50% - #{$m8});
                     .item {
                         margin: $m16 0;
-                        padding : $m8;
-                        transform: skewX(0deg) !important;
+                        transform: none !important;
                         right : 0 !important;
                         left : 0 !important;
                         p {
-                            transform: skewX(0deg) !important;
+                            transform: none !important;
                             font-family: "GilroyBold";
-                            font-size: $m14;
-                            line-height: $m17;
+                            font-size: $m14 !important;
+                            line-height: $m17 !important;
                             width : 60%;
+                            margin-right: 0;
                         }
                         .bg {
                             width : $m40;
                             height : $m40;
+                            border-radius: $m8;
                             img {
                                 transform: skewX(0deg) !important;
                                 width : $m20;
@@ -745,7 +754,7 @@
                 height : 70%;
                 width : 100%;
                 left : 0;
-                background : linear-gradient(0deg, #fff, transparent);
+                background: linear-gradient(0deg, #fff 0%, rgba(255,255,255,0) 100%);
             }
         }
         .read_more {
@@ -837,12 +846,29 @@
             }
         }
         .block_five {
-            padding-top : $m45;
+            padding-top : $m90;
             padding-bottom : $m56;
             .container {
                 flex-direction : column;
+                align-items: center;
                 padding        : 0 !important;
+                &:before {
+                    width: $m405;
+                    height: $m405;
+                    top: $m45;
+                    right: $m69;
+                    left: auto;
+                }
+                &:after {
+                    width: $m81;
+                    height: $m81;
+                    right: $m16;
+                    top: $m370;
+                    left: auto;
+                    z-index: -1;
+                }
                 .left_block {
+                    width: 100vw;
                     .mob_title {
                         margin-bottom : $m28;
                     }
@@ -852,10 +878,11 @@
                             margin-bottom : $m16;
                             font-size: $m16;
                             line-height: $m19;
-                            padding-left : $m30;
+                            padding-left : $m46;
+                            padding-right: $m6;
                             &:before {
-
-                                top : $m3;
+                                top : $m4;
+                                left: $m16;
                                 width : $m12;
                                 z-index : 1;
                                 height : $m12;
@@ -868,7 +895,7 @@
                                 background: #4FE5E2;
                                 position: absolute;
                                 content: "";
-                                left : -$m16;
+                                left : 0;
                                 top : -2px;
                             }
                         }
@@ -933,7 +960,6 @@
                 p {
                     margin: $m16 $m10 $m24 !important;
                     text-align: center !important;
-                    font-family: 'GilroyRegular' !important;
                     font-size: $m14 !important;
                     line-height: $m20 !important;
                     color: rgba(255, 255, 255, 0.8) !important;

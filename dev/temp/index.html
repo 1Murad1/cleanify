@@ -24,7 +24,6 @@
                         <h1>Cleaning You&nbsp;<span class="color">Can Trust</span></h1>
                         <p>Feel the touch of the best cleaning service in Brooklyn</p>
                         //= include/select.html
-
                     </div>
                 </div>
                 <div id="services" class="block_two">
@@ -177,27 +176,36 @@
                             <!--<img src="/img/icons/main/dashed.svg" alt="border_dashed" class="img_dashed"/>-->
                             <div class="item_icon wow fadeIn" data-wow-delay="00ms">
                                 <div class="icon">
-                                    <img src="/img/icons/main/calendar.svg" alt="icon" />
+                                    <img src="/img/icons/main/1.svg" alt="icon" />
                                 </div>
-                                <h4>Book Your Time</h4>
-                                <p>Tell us when and where you want
-                                    your cleaning</p>
+                                <h4>Deep Cleaning</h4>
+                                <p>Using water and cleaning
+                                    solution helps cleanse your
+                                    space and expose any
+                                    potentially dangerous
+                                    pathogens</p>
                             </div>
                             <div class="item_icon wow fadeIn" data-wow-delay="100ms">
                                 <div class="icon">
-                                    <img src="/img/icons/main/clean.svg" alt="icon" />
+                                    <img src="/img/icons/main/2.svg" alt="icon" />
                                 </div>
-                                <h4>Confirm Your Services</h4>
-                                <p>WA professional cleaner comes
-                                    over and cleans your place</p>
+                                <h4>Disinfectant Services</h4>
+                                <p>Once your space has been
+                                    properly cleaned, our trained
+                                    technicians apply a
+                                    hospital-grade disinfectant
+                                    Hypochlorous acid</p>
                             </div>
                             <div class="item_icon wow fadeIn" data-wow-delay="200ms">
                                 <div class="icon">
-                                    <img src="/img/icons/main/meditation.svg" alt="icon" />
+                                    <img src="/img/icons/main/3.svg" alt="icon" />
                                 </div>
-                                <h4>Relax</h4>
-                                <p>Enjoy your life and come back
-                                    to a clean space</p>
+                                <h4>Antimicrobial Coating</h4>
+                                <p>We offer a unique
+                                    technological solution that
+                                    reinforces surfaces against
+                                    harmful germs which will
+                                    remain long after we’re gone</p>
                             </div>
                         </div>
                     </div>
@@ -286,9 +294,9 @@
                     <p class="title">Get Cleaning Quote</p>
                     <input required type="text" name="name" placeholder="Name">
                     <input required type="tel" name="phone" placeholder="Phone" maxlength="13">
-                    <input required type="email" name="email" placeholder="Email">
+                    <input required type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     <input required type="text" name="code" placeholder="ZIP Code">
-                    <input type="number" name="m2" placeholder="m²" class="m2" maxlength="5">
+                    <input type="number" name="m2" placeholder="m²" class="m2" maxlength="5" >
                     <button type="submit">Get Cleaning Quote</button>
                     <label>
                         <input required type="checkbox" name="agree">
@@ -312,6 +320,12 @@
                         $("input[name='code']").mask("99-9999").click(function () {
                             $(this).focus();
                             $(this).get(0).setSelectionRange(0,0);
+                        });
+                        $("nav").on("click","a", function (event) {
+                            event.preventDefault(); //опустошим стандартную обработку
+                            var id  = $(this).attr('href'), //заберем айдишник блока с параметром URL
+                                top = $(id).offset().top - 100; //определим высоту от начала страницы до якоря
+                            $('body,html').animate({scrollTop: top}, 1000); //сделаем прокрутку за 1 с
                         });
                     })
                 })(jQuery);
