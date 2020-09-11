@@ -163,18 +163,18 @@
                     <div class="container">
                         <div class="left_block">
                             <h3>Our 3 Step Process</h3>
-                            <p>Deep cleaning exposes dangerous pathogens so they can be destroyed.
-                                Thorough disinfecting properly sanitizes your <span id="hide_bg"></span><span id="more">space by eradicating remaining
+                            <p class="text-hide">Deep cleaning exposes dangerous pathogens so they can be destroyed.
+                                Thorough disinfecting properly sanitizes your <span class="hide_bg"></span><span class="more">space by eradicating remaining
                                 bacteria or viruses. By using antimicrobial coating technology, we create a
                                 barrier which kills new bacteria upon contact for several months before needing
                                     to be reinforced</span></p>
-                            <button id="read_more">
+                            <button class="read_more">
                                 <span class="read">Read More</span>
                                 <span class="more">Hide</span>
                             </button>
                         </div>
-                        <div class="right_block">
-                            <img src="/img/icons/main/dashed.svg" alt="border_dashed" class="img_dashed"/>
+                        <div class="right_block slider_three">
+                            <!--<img src="/img/icons/main/dashed.svg" alt="border_dashed" class="img_dashed"/>-->
                             <div class="item_icon wow fadeIn" data-wow-delay="00ms">
                                 <div class="icon">
                                     <img src="/img/icons/main/calendar.svg" alt="icon" />
@@ -205,6 +205,7 @@
                 <div id="why-us" class="block_five">
                     <div class="container">
                         <div class="left_block">
+                            <h3 class="mob_title">Why Choose Us</h3>
                             <ul class="lists">
                                 <li>Insured and trained cleaning team</li>
                                 <li>Non toxic cleaning supplies provided</li>
@@ -214,19 +215,25 @@
                             </ul>
                         </div>
                         <div class="right_block">
-                            <h3>Why Choose Us</h3>
-                            <p>Our approach includes a transparent, affordable and quick
-                                service that will stand the test of time. We go to great lengths to
-                                ensure that your high touch surfaces are not just wiped down,
-                                but that we develop a custom plan for your particular needs that
-                                abide to all CDC & EPA guidelines.
+                            <h3 class="dekstop_title">Why Choose Us</h3>
+                            <p class="text-hide">Cleanify offers cleaning & decontamination services powered by
+                                the most recent advancements in <span class="hide_bg"></span> <span class="more">safe disinfectant technology.
 
-                                Our highly trained and disciplined cleaning team offer
-                                professional disinfecting services when you need it most,
-                                according to your ideal schedule. We know that one size doesn’t
-                                fit all when it comes to deciding how best to sanitize your space.
-                                Cleanify’s customer-centric approach towards germ mitigation
-                                will result in a pristine & healthy space for all.</p>
+                                Our approach includes transparent, affordable and reliable
+                                service that will stand the test of time. We go to great lengths to
+                                ensure that your space is not just generically cleaned, but is
+                                treated in accordance with the best custom approach for your
+                                needs.
+
+                                Our highly trained and disciplined team offers professional
+                                cleaning services when you need them most. Cleanify’s
+                                customer-centric approach towards germ mitigation will help
+                                you deliver a pristine & healthy environment for all people who
+                                    interact with your facility</span></p>
+                            <button class="read_more">
+                                <span class="read">Read More</span>
+                                <span class="more">Hide</span>
+                            </button>
                             <a href="javascript: void(0)" onclick="$('.popup').fadeIn()" class="button reverse">Get Cleaning Quote</a>
                         </div>
                     </div>
@@ -278,10 +285,10 @@
                     <img src="/img/icons/close.svg" alt="" class="close" onclick="$('.popup').removeClass('select').fadeOut()"/>
                     <p class="title">Get Cleaning Quote</p>
                     <input required type="text" name="name" placeholder="Name">
-                    <input required type="tel" name="phone" placeholder="Phone">
+                    <input required type="tel" name="phone" placeholder="Phone" maxlength="13">
                     <input required type="email" name="email" placeholder="Email">
                     <input required type="text" name="code" placeholder="ZIP Code">
-                    <input type="text" name="m2" placeholder="m²" class="m2">
+                    <input type="number" name="m2" placeholder="m²" class="m2" maxlength="5">
                     <button type="submit">Get Cleaning Quote</button>
                     <label>
                         <input required type="checkbox" name="agree">
@@ -298,9 +305,14 @@
                         $('input[type="checkbox"], select').styler();
                     });
                     $(document).ready(function () {
-                        $('.popup .close').click(function () {
-
-                        })
+                       /* $("input[name='phone']").mask("9").click(function () {
+                            $(this).focus();
+                            $(this).get(0).setSelectionRange(0,0);
+                        });*/
+                        $("input[name='code']").mask("99-9999").click(function () {
+                            $(this).focus();
+                            $(this).get(0).setSelectionRange(0,0);
+                        });
                     })
                 })(jQuery);
             </script>
