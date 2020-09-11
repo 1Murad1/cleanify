@@ -317,6 +317,7 @@
                 top: $a40;
                 background: #F9F9F9;
                 border-radius : 50%;
+                z-index : -1;
             }
             &:after {
                 position: absolute;
@@ -535,7 +536,7 @@
     }
 }
 
-.read_more {
+.wrap_arrow {
     display: none;
 }
 
@@ -728,48 +729,100 @@
         .block_four {
             padding-top : $m53;
             .container {
-                flex-direction: column;
+                flex-direction : column;
                 .left_block {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                    display        : flex;
+                    flex-direction : column;
+                    align-items    : center;
                     h3 {
                         margin-bottom : $m16;
                     }
                     p {
-                        text-align: justify !important;
-                        padding-left : 0!important;
+                        text-align   : justify !important;
+                        padding-left : 0 !important;
                         #more {
-                            display: none;
-                        }
-                    }
-                    #read_more {
-                        cursor: pointer;
-                        border: none;
-                        background: none;
-                        outline: none;
-                        display: block;
-                        margin-top : $m10;
-                        text-align: center;
-                        font-size: $m12;
-                        position: relative;
-                        line-height: $m20;
-                        color: #204479;
-                        font-family: "GilroySemiBold";
-                        transform: .5s all;
-                        &:after {
-                            padding-left : $m7 !important;
-                            content: url("/img/icons/main/arrow_down.svg");
-                            position: absolute;
-                            width : $m10;
-                            //height : $m6;
-                        }
-                        &:hover:after {
-                            padding-right : $m7 !important;
-                            transform: rotate(180deg);
+                            display : none;
                         }
                     }
 
+                }
+                .right_block {
+                    //flex-direction: column;
+                    .img_dashed {
+                        width : 100%;
+                        left : 0;
+                        top : 0;
+                    }
+                    .item_icon {
+
+                        h4 {
+                            margin-top : $m16;
+                            margin-bottom : $m8;
+                        }
+                        .icon {
+                            width : $m56;
+                            border-radius: $m12;
+                            height : $m56;
+                            display: flex;
+                            justify-content : center;
+                            align-items: center;
+                            img {
+                                width : $m32;
+                                height : $m32;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        .block_five {
+            padding-top : $m45;
+            padding-bottom : $m56;
+            .container {
+                flex-direction : column;
+                padding        : 0 !important;
+                .left_block {
+                    .mob_title {
+                        margin-bottom : $m28;
+                    }
+                    .lists {
+                        padding-left : 0;
+                        li {
+                            margin-bottom : $m16;
+                            font-size: $m16;
+                            line-height: $m19;
+                            padding-left : $m30;
+                            &:before {
+
+                                top : $m3;
+                                width : $m12;
+                                z-index : 1;
+                                height : $m12;
+                            }
+                            &:after {
+                                border-top-right-radius: $m16;
+                                border-bottom-right-radius: $m16;
+                                width: $m36;
+                                height: $m24;
+                                background: #4FE5E2;
+                                position: absolute;
+                                content: "";
+                                left : -$m16;
+                                top : -2px;
+                            }
+                        }
+                    }
+                }
+                .right_block {
+                    p {
+                        padding-left : 0 !important;
+                        font-size : $m16 !important;
+                        line-height : $m24 !important;
+                        #more_two {
+                            display: none;
+                        }
+                    }
                 }
             }
         }

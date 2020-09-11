@@ -949,6 +949,43 @@ h5 {
   input[placeholder] {
     text-overflow:ellipsis;
   }
+#main {
+  .wrap_arrow {
+    margin-bottom : $m24;
+    display       : flex;
+    align-items   : center;
+    margin-top    : $m10;
+    .read_more {
+      cursor       : pointer;
+      border       : none;
+      background   : none;
+      outline      : none;
+      display      : block;
+      text-align   : center;
+      font-size    : $m12;
+      position     : relative;
+      line-height  : $m20;
+      color        : #204479;
+      font-family  : "GilroySemiBold";
+      transition   : .5s all;
+      margin-right : $m8;
+      .arrow_down {
+
+      }
+      //&:after {
+      //    padding-left : $m7 !important;
+      //    content: url("/img/icons/main/arrow_down.svg");
+      //    position: absolute;
+      //    width : $m10;
+      //    //height : $m6;
+      //}
+      //&:hover:after {
+      //    padding-right : $m7 !important;
+      //    transform: rotate(180deg);
+      //}
+    }
+  }
+}
 
   #footer {
     .footer_top {
@@ -1042,6 +1079,8 @@ h5 {
       }
     }
   }
+
+
 
   .selects_wrapper {
     padding : $m24;

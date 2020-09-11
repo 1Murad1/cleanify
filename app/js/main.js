@@ -20,7 +20,13 @@ $(window).on('load resize', function() {
             slidesToShow: 2,
             slidesToScroll: 2
         });
-    }
+    //     $('.slider_three').slick({
+    //         dots: true,
+    //         arrows: false,
+    //         slidesToShow: 2,
+    //         slidesToScroll: 2
+    //     });
+     }
 });
 
 $(window).on("load", function() {
@@ -30,18 +36,27 @@ $(window).on("load", function() {
     wow.init();
 });
 
-const btn = document.getElementById("read_more");
-btn.addEventListener("click", function (e) {
-   const hide_bg = document.getElementById("hide_bg");
-   const more = document.getElementById("more");
-   if(hide_bg.style.display === "none") {
-       hide_bg.style.display = "inline";
-       e.target.innerHTML= "Read More";
-       more.style.display ="none"
-   } else {
-       hide_bg.style.display = "none";
-       e.target.innerHTML= "hide";
-       more.style.display ="inline"
-   }
 
+const wrap_btn = document.querySelectorAll(".wrap_arrow");
+
+wrap_btn.forEach(item => {
+    const btn = item.querySelector(".read_more");
+    const more = item.querySelector("#more");
+    const more_two = item.querySelector("#more_two");
+    const hide_bg = item.querySelector("#hide_bg");
+    const hide_bgs = item.querySelector("#hide_bgs");
+
+    btn.addEventListener("click", function (e) {
+        if (hide_bg.style.display === "none") {
+            hide_bg.style.display = "inline";
+            e.target.innerHTML = "Read More";
+            more.style.display = "none";
+            arrow_down.style.transform = "rotate(0)"
+        } else {
+            hide_bg.style.display = "none";
+            e.target.innerHTML = "hide";
+            more.style.display = "inline";
+            arrow_down.style.transform = "rotate(180deg)"
+        }
+    })
 });
