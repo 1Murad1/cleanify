@@ -1052,6 +1052,12 @@ h5 {
       margin-bottom : $m8;
       border-radius: $m16;
       width : 100%;
+      &.opened {
+        border-radius: $m16;
+        .jq-selectbox__select {
+          border-radius: $m16 $m16 0 0;
+        }
+      }
       .jq-selectbox__select {
         padding: $m20;
         border-radius: $m16;
@@ -1059,12 +1065,32 @@ h5 {
         opacity: 0.7 !important;
         .jq-selectbox__trigger {
           .jq-selectbox__trigger-arrow {
-            width : $m10;
-            height : $m10;
+            width : $m8;
+            height : $m8;
+            border-width : $m2;
           }
         }
       }
+      .jq-selectbox__dropdown {
+        border-radius: 0 0 $m16 $m16;
+        ul {
+          &::-webkit-scrollbar {
+            width: $m2;
+            border-radius : 2px;
+          }
 
+          &::-webkit-scrollbar-thumb {
+            width: $m2;
+          }
+
+          &::-webkit-scrollbar-thumb:window-inactive {
+            width: $m2;
+          }
+          li {
+            padding : $m10 $m20;
+          }
+        }
+      }
     }
   }
 

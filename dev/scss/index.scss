@@ -595,9 +595,9 @@
             background-position-x: right !important;
             background-size: cover !important;
             .container {
-                padding-bottom : $m24;
+                padding : $m24 0;
                 h1 {
-                    width : 70%;
+                    width : 90%;
                     margin-bottom : $m16 !important;
                 }
                 p {
@@ -737,10 +737,21 @@
                         margin-bottom : $m16;
                     }
                     p {
-                        text-align: justify !important;
+                        text-align: center !important;
+                        line-height : $m20 !important;
                         padding-left : 0!important;
+                        font-size : $m14 !important;
+                        position : relative;
                         #more {
                             display: none;
+                        }
+                        #hide_bg {
+                            position: absolute;
+                            bottom : 0;
+                            height : 70%;
+                            width : 100%;
+                            left : 0;
+                            background : linear-gradient(0deg, #fff, transparent);
                         }
                     }
                     #read_more {
@@ -748,7 +759,6 @@
                         border: none;
                         background: none;
                         outline: none;
-                        display: block;
                         margin-top : $m10;
                         text-align: center;
                         font-size: $m12;
@@ -757,16 +767,29 @@
                         color: #204479;
                         font-family: "GilroySemiBold";
                         transform: .5s all;
+                        display: flex;
+                        align-items: center;
+                        .more {
+                            display: none;
+                        }
                         &:after {
                             padding-left : $m7 !important;
-                            content: url("/img/icons/main/arrow_down.svg");
-                            position: absolute;
+                            content: '';
+                            background : url("/img/icons/main/arrow_down.svg") no-repeat center center;
+                            height : $m10;
                             width : $m10;
-                            //height : $m6;
                         }
-                        &:hover:after {
-                            padding-right : $m7 !important;
-                            transform: rotate(180deg);
+                        &.open {
+                            .read {
+                                display: none;
+                            }
+                            .more {
+                                display: block;
+                            }
+                            &:after {
+                                padding-right : $m7 !important;
+                                transform: rotate(180deg);
+                            }
                         }
                     }
 

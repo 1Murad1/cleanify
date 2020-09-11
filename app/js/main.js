@@ -33,15 +33,15 @@ $(window).on("load", function() {
 const btn = document.getElementById("read_more");
 btn.addEventListener("click", function (e) {
    const hide_bg = document.getElementById("hide_bg");
-   const more = document.getElementById("more");
+   const more = $("#more");
    if(hide_bg.style.display === "none") {
        hide_bg.style.display = "inline";
-       e.target.innerHTML= "Read More";
-       more.style.display ="none"
+       $('#read_more').removeClass('open')
+       more.slideUp()
    } else {
        hide_bg.style.display = "none";
-       e.target.innerHTML= "hide";
-       more.style.display ="inline"
+       $('#read_more').addClass('open')
+       more.slideDown()
    }
 
 });
