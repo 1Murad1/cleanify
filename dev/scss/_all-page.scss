@@ -265,7 +265,7 @@ body {
 #header {
   padding-top : $a70;
   position: absolute;
-  z-index : 1;
+  z-index : 30;
   top : 0;
   width : 100%;
   .container {
@@ -377,6 +377,7 @@ body {
   //    border-bottom: 100px solid red;
   //    border-left: 100px solid transparent;
   //}
+
   .jq-selectbox {
     font-family: "GilroyMedium";
     font-size: $a16;
@@ -391,8 +392,8 @@ body {
     &:last-of-type {
       .jq-selectbox__dropdown {
         border-top : 0;
-        border-radius: 0 $a16 $a16 $a16;
-        width : 200% !important;
+        border-radius: 0 0 $a16 $a16;
+        width : 100% !important;
         &:before {
           content    : '';
           position   : absolute;
@@ -758,22 +759,23 @@ h5 {
   }
 
   h3 {
-    font-size      : $m20 !important;
-    padding-bottom : $m18 !important;
+    font-size      : $m26 !important;
+    font-family: 'GilroyExtraBold' !important;
+    line-height: $m32;
+    color: #161F32 !important;
+    text-align: center !important;
   }
 
   h4 {
+    font-family: 'GilroyBold' !important;
     text-align   : left !important;
-    line-height  : $m25 !important;
-    padding-left : $m5 !important;
-    font-size    : $m18 !important;
-    white-space  : normal !important;
-    margin       : $m10 auto !important;
-    width        : fit-content;
+    line-height  : $m19 !important;
+    font-size    : $m16 !important;
   }
 
+
   h5 {
-    font-family: 'GilroyBold';
+    font-family: 'GilroyBold' !important;
     font-size: $m14;
     line-height: $m17;
     color: #161F32 !important;
@@ -942,37 +944,7 @@ h5 {
     }
   }
 
-  #main {
-    .block_one {
-      height: auto !important;
-      background: url(/img/main/main_banner.png) no-repeat !important;
-      background-position-x: right !important;
-      background-size: cover !important;
-      .container {
-        padding-bottom : $m24;
-        h1 {
-          width : 70%;
-          margin-bottom : $m16 !important;
-        }
-        p {
-          display: none;
-        }
-      }
-    }
-    .block_six {
-      .container {
-        p {
-          margin: $m16 $m35 $m24 !important;
-          text-align: center !important;
-          font-family: 'GilroyRegular' !important;
-          font-size: $m14 !important;
-          line-height: $m20 !important;
-          color: rgba(255, 255, 255, 0.8) !important;
 
-        }
-      }
-    }
-  }
 
   input[placeholder] {
     text-overflow:ellipsis;
@@ -1003,21 +975,21 @@ h5 {
             border-radius: $m12;
           }
           .fb {
-            margin-right : $m6;
+            margin-right : $m5;
             padding: $m11 $m15;
             img {
               width : $m10;
             }
           }
           .inst {
-            margin-right : $m6;
-            padding: $m11 $m12;
+            margin-right : $m5;
+            padding: $m11 $m11;
             img {
               width : $m18;
             }
           }
           .pint {
-            padding: $m11 $m12;
+            padding: $m11 $m11;
             img {
               width : $m18;
             }
@@ -1045,13 +1017,27 @@ h5 {
     }
     .footer_bottom {
       .container {
+        flex-flow: row wrap;
         padding-top : $m8;
         padding-bottom : $m8;
+        align-items: start;
         p {
-          font-size: $m10;
-          line-height: $m22;
-          color: #161F32;
-          opacity: 0.7;
+          font-size: $m10 !important;
+          line-height: $m22 !important;
+          color: #161F32 !important;
+          opacity: 0.7 !important;
+        }
+        .year, .wrap, .mob_title {
+          width : 50%;
+        }
+        .mob_title {
+          order: 3;
+          margin-top : -$m22;
+        }
+        .wrap {
+          img {
+            width : $m66;
+          }
         }
       }
     }
@@ -1083,4 +1069,5 @@ h5 {
   }
 
 }
+
 
